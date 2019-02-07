@@ -1,0 +1,18 @@
+.fa-shower{
+    color: #fff;
+}
+
+.circle{
+    width: 140px;
+    height: 140px;
+    background-color: #8CC63F;
+    border-radius: 50%;
+}
+
+.card-body{
+    background-color: #EFEFEF !important;
+}
+
+.col-content{
+    background-color: #fff;
+}
