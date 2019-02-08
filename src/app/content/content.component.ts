@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-content',
@@ -10,6 +10,19 @@ export class ContentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  scrollPosition: boolean =false;
+
+
+  @HostListener('window:scroll', ['$event'])
+  knowPosition(event){
+    if(window.pageYOffset >= 260){
+      this.scrollPosition = true;
+    }
+    else if(window.pageYOffset <= 100){
+      this.scrollPosition = false;
+    }
   }
 
 }
