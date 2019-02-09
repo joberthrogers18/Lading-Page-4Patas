@@ -5,7 +5,7 @@
 .circle{
     width: 140px;
     height: 140px;
-    background-color: #8CC63F;
+    background-color: #137030;
     border-radius: 50%;
 }
 
@@ -35,4 +35,36 @@
 -moz-animation: fadeIn 2.5s ease-in-out;
 -o-animation: fadeIn 2.5s ease-in-out;
 animation: fadeIn 2.5s ease-in-out;
+}
+
+#img-map{
+    width: 200px;
+    height: 400px;
+}
+
+.card-map{
+    background-image: url('/assets/img/background.png');
+    border-radius: 30px !important;
+}
+
+.card-plataform{
+    background-image: url('/assets/img/plataforms.png');
+    border-radius: 30px !important;
+    background-repeat: no-repeat;
+}
+
+.line-map{
+    color: #EFEFEF;
+}
+
+.card{
+    border-radius: 30px !important;
+}
+
+#img-commentarie{
+    margin-left: 300px;
+}
+
+.text-commentarie{
+    line-height: 1.9;
 }
