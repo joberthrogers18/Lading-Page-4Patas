@@ -1,3 +1,4 @@
+<div (scroll)="knowPosition($event)"></div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-nav">
   <div class="mx-auto">
     <img src="assets/img/logobranca.svg" class="ml-3 mt-3 mb-3 mr-5" alt="" id="img-nav">
@@ -38,5 +39,73 @@
 
 </div>    
 <div class="container mb-5">
-  <app-content></app-content>
+  <app-content class="mt-5" (scrollPositionfooter)="footerApear($event)"></app-content>
+</div>
+
+<div class="footer" *ngIf="footerPermission">
+  <div class="container">
+      <div class="row">
+        <div class="col-4">
+            <img src="/assets/img/logobranca.svg" id="img-footer" class=" float-left mb-5" alt="">
+        </div>
+        <div class="col mt-5">
+          <div class="row">
+            <div class="col mt-4">
+              <div class="row">
+                <div class="col">
+                    <h5><strong>Fale com a gente</strong></h5>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                    <h6 style="color:white !important;">(123)1234-5678</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                    <h6 style="color: white !important;">(321)99124-5478</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                    <h6 style="color: white !important;">LorenIpsum@gmail.com</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-5 mt-4">
+                <div class="row">
+                  <div class="col">
+                      <h5><strong>Empresa</strong></h5>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col">
+                      <h6><a href="#" style="color: white!important;">Quem somos?</a></h6>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6><a href="#" style="color: white !important;">Termos e Políticas</a></h6> 
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row mt-5">
+            <div class="col mt-4">
+                <h5><strong>Nossas redes sociais:</strong></h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2 ml-5">
+                <a href="#" style="color: white !important;"><i class="fab fa-instagram fa-3x ml-4"></i></a>
+            </div>
+            <div class="col ml-3">
+                <a href="#" style="color: white !important;"><i class="fab fa-facebook-square  fa-3x float-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
 </div>

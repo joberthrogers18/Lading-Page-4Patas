@@ -1,4 +1,5 @@
-<div class="mt-5 fadeIn" id="main-content" *ngIf = "scrollPosition">
+
+<div class="mt-5 fadeIn2 teste" id="main-content" *ngIf = "scrollPositionDetail">
     <div class="card">
         <div class="card-body">
             <div class="row justify-content-md-center">
@@ -85,7 +86,7 @@
     </div>
 </div>
 
-<div class="card mt-5 card-map">
+<div class="card mt-5 card-map fadeIn2" *ngIf = "scrollPositionMap">
     <div class="card-body  border border-light rounded">
         <div class="row">
             <div class="col-9" >
@@ -120,7 +121,7 @@
 </div>
 
 
-<div class="card mt-5">
+<div class="card mt-5 fadeIn2 mb-5" *ngIf="scrollPositionCommentarie">
         <div class="card-body  border border-light rounded">
             <div class="row">
                 <div class="col">
@@ -144,10 +145,11 @@
         </div>
 </div>
 
-<div class="card mt-5 card-plataform">
+<div class="card mt-5 card-plataform fadeIn2" *ngIf="scrollPositionPlataforms">
         <div class="card-body" style="height: 500px;">
             
         </div>
 </div>
+
 
 
