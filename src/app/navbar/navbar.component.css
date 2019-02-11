@@ -17,13 +17,17 @@
 }
 
 .text-img{
-    font-size: 70px;
+    font-size: 50px;
     color: white;
+    margin-right: 170px;
+}
+
+.first-line-map{
+    margin-top: 280px !important;
 }
 
 .button-icon{
-    margin-top: 450px;
-    margin-left: 250px;
+    margin-left: 190px;
     background-color: #36B461;
     color: white;
 }
