@@ -1,14 +1,14 @@
 
-<div class="mt-5 fadeIn2 teste" id="main-content" *ngIf = "scrollPositionDetail">
-    <div class="card">
+<div class="mt-5 fadeIn2 " id="main-content" *ngIf = "scrollPositionDetail">
+    <div class="card shadow rounded border border-white">
         <div class="card-body">
             <div class="row justify-content-md-center">
                 <div class="col-md-auto">
                     <h3><strong>O que você está procurando para seu amiguinho?</strong></h3>
                 </div>
             </div>
-            <div class="row mt-5 ml-2 mr-2">
-                <div class="col col-content border border-light rounded mr-2" (mouseenter)="mouseOverShower=true" (mouseleave)="mouseOverShower=false" >
+            <div class="row mt-5 ml-2 mr-2 mb-3">
+                <div class="col col-content mr-3 ml-2 shadow" (mouseenter)="mouseOverShower=true" (mouseleave)="mouseOverShower=false" >
                     <div class="row mt-3" *ngIf="!mouseOverShower">
                         <div class="col">
                             <div class="circle mx-auto">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col col-content border border-light rounded mr-2" (mouseenter)="mouseOverHealth=true" (mouseleave)="mouseOverHealth=false">
+                <div class="col col-content shadow rounded mr-3" (mouseenter)="mouseOverHealth=true" (mouseleave)="mouseOverHealth=false">
                     <div class="row mt-3" *ngIf="!mouseOverHealth">
                         <div class="col">
                             <div class="circle mx-auto">
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col col-content border border-light rounded" (mouseenter)="mouseOverProduct=true" (mouseleave)="mouseOverProduct=false">
+                <div class="col col-content shadow rounded mr-2" (mouseenter)="mouseOverProduct=true" (mouseleave)="mouseOverProduct=false">
                     <div class="row mt-3" *ngIf="!mouseOverProduct">
                         <div class="col">
                             <div class="circle mx-auto">
@@ -101,8 +101,8 @@
     </div>
 </div>
 
-<div class="card mt-5 card-map fadeIn2" *ngIf = "scrollPositionMap">
-    <div class="card-body  border border-light rounded">
+<div class="card mt-5 card-map fadeIn2 rounded" *ngIf = "scrollPositionMap">
+    <div class="card-body">
         <div class="row">
             <div class="col-9" >
                 <div class="row justify-content-md-center line-map" id="first-line-map">
@@ -136,8 +136,8 @@
 </div>
 
 
-<div class="card mt-5 fadeIn2 mb-5" *ngIf="scrollPositionCommentarie">
-        <div class="card-body  border border-light rounded">
+<div class="card mt-5 fadeIn2 mb-5 border border-white shadow" *ngIf="scrollPositionCommentarie">
+        <div class="card-body  rounded">
             <div class="row">
                 <div class="col">
                     <img src="/assets/img/commentaries.png" alt="">
@@ -160,7 +160,7 @@
         </div>
 </div>
 
-<div class="card mt-5 card-plataform fadeIn2" *ngIf="scrollPositionPlataforms">
+<div class="card mt-5 card-plataform fadeIn2 border border-white" *ngIf="scrollPositionPlataforms">
         <div class="card-body" style="height: 500px;">
             
         </div>

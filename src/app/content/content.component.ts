@@ -32,8 +32,13 @@ export class ContentComponent implements OnInit, OnChanges{
     if(this.permitionClick){
       this.scrollPositionDetail = true;
       this.scrollPositionMap =true;
+      this.scrollPositionCommentarie =true;
+      this.scrollPositionPlataforms = true;
 
-      window.scrollTo(0,document.body.scrollHeight);
+      setTimeout(function () {
+        window.scrollTo(0,(document.body.scrollHeight / 3) - 10);
+      }, 500);
+
     }
   }
 
