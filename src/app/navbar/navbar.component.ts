@@ -9,10 +9,15 @@ import { EventEmitter } from 'events';
 export class NavbarComponent implements OnInit {
 
   footerPermission:boolean = false;
+  permitionClick: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  scrollDown(event){
+    this.permitionClick = true;
   }
 
   footerApear(event: boolean){

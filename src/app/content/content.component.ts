@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, HostListener, OnInit, Output, EventEmitter, Input, OnChanges } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 declare var jquery:any;
 declare var $ :any;
 
@@ -7,7 +8,7 @@ declare var $ :any;
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
-export class ContentComponent implements OnInit {
+export class ContentComponent implements OnInit, OnChanges{
 
   constructor() { }
 
@@ -21,65 +22,76 @@ export class ContentComponent implements OnInit {
   count: number = 0;
   @Output() scrollPositionfooter: EventEmitter<boolean> =   new EventEmitter();
 
-  /*@HostListener('window:scroll', ['$event'])
-  knowPosition(event){
-      
-      console.log($(".teste").scrollTop() + $(".teste").innerHeight() >= $(".teste")[0].scrollHeight);
+  mouseOverShower: boolean = false;
+  mouseOverHealth: boolean = false;
+  mouseOverProduct: boolean = false;
 
-        $('div').scroll( function(){
-          console.log((this).scrollTop() + $(this).innerHeight());
-        })
-      
-    
+  @Input() permitionClick: boolean = false;
 
-    if(window.pageYOffset >= 63){
+  ngOnChanges(){
+    if(this.permitionClick){
       this.scrollPositionDetail = true;
-    }
-    
-    if(window.pageYOffset >= 600){
-      this.scrollPositionMap = true;
-    }
+      this.scrollPositionMap =true;
 
-    if(window.pageYOffset >= 1130){
-      this.scrollPositionCommentarie = true;
+      window.scrollTo(0,document.body.scrollHeight);
     }
-
-    if(window.pageYOffset >= 1800){
-      this.scrollPositionPlataforms = true;
-    }
-  }*/
+  }
 
   @HostListener("window:scroll", ["$event"])
-onWindowScroll() {
+    onWindowScroll() {
     
+      let pos = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.offsetHeight;
+      let max = document.documentElement.scrollHeight;
 
+      if(pos >= max - 20 )   {
+        this.count += 1;
+        console.log(this.count);
 
-    let pos = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.offsetHeight;
-    let max = document.documentElement.scrollHeight;
-
-    if(pos >= max - 10 )   {
-      this.count += 1;
-      console.log(this.count);
-
-      switch(this.count) {
-        case 1:
-          this.scrollPositionDetail = true;
+        switch(this.count) {
+          case 1:
+            this.scrollPositionDetail = true;
+            break;
+          case 2:
+            this.scrollPositionMap = true;
+            break;
+          case 3:
+          this.scrollPositionCommentarie = true;
           break;
-        case 2:
-          this.scrollPositionMap = true;
+          case 4:
+            this.scrollPositionPlataforms = true;
+          case 6: 
+            this.scrollPositionfooter.emit(true);
           break;
-        case 3:
-        this.scrollPositionCommentarie = true;
-        break;
-        case 4:
-          this.scrollPositionPlataforms = true;
-        case 6: 
-          this.scrollPositionfooter.emit(true);
-        break;
-      }
-          // code block
-    //Do your action here
- }
-}
+        }
+    }
+
+  }
+
+  ActionMouseOverShower(event){
+    if(event){
+      this.mouseOverShower = true;
+    }
+    else{
+      this.mouseOverShower = false;
+    }
+  }
+
+  ActionMouseOverHealth(event){
+    if(event){
+      this.mouseOverHealth = true;
+    }
+    else{
+      this.mouseOverHealth = false;
+    }
+  }
+
+  ActionMouseOverProduct(event){
+    if(event){
+      this.mouseOverProduct = true;
+    }
+    else{
+      this.mouseOverProduct = false;
+    }
+  }
 
 }

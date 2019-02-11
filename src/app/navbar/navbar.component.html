@@ -7,7 +7,7 @@
 <div class="main-img">
   <div class="row">
     <div class="col-6">
-      <button class="btn button-icon">
+      <button class="btn button-icon" (click)="scrollDown($event)">
         <div class="row">
           <div class="col-3">
               <img src="/assets/img/logo-icone-white.png" id="icon-white" alt="icon white">
@@ -39,7 +39,7 @@
 
 </div>    
 <div class="container mb-5">
-  <app-content class="mt-5" (scrollPositionfooter)="footerApear($event)"></app-content>
+  <app-content class="mt-5" [permitionClick]="permitionClick" (scrollPositionfooter)="footerApear($event)"></app-content>
 </div>
 
 <div class="footer" *ngIf="footerPermission">
